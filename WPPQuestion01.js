@@ -19,7 +19,7 @@ function getDayTime () {
   let newHoursFormate = hours > 12 ? `PM` : `AM`
   hours = hours % 12
   hours = hours ? hours : 12
-  hours = hours > 12 ? `0${hours}` : `${hours}`
+  hours = hours < 12 ? `0${hours}` : `${hours}`
   minutes = minutes < 10 ? `0${minutes}` : `${minutes}`
   milliSecond = milliSecond < 10 ? `0${milliSecond}` : `${milliSecond}`
   console.log(`Current time is : ${hours}: ${minutes}: ${milliSecond} ${newHoursFormate}`)
